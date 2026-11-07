@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glava — AI organizer za advokatske kancelarije</title>
+<meta name="description" content="Glava je organizer za advokatske kancelarije u Srbiji sa AI-jem ugrađenim u predmet: odgovori sa citatom i brojem strane, Prijemna pošta, rokovi i ročišta, rad na serveru kancelarije ili u oblaku.">
+<meta property="og:title" content="Glava — AI organizer za advokatske kancelarije">
+<meta property="og:description" content="AI koji čita spise predmeta i za svaku tvrdnju pokaže stranu. Na vašem serveru ili u oblaku.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alexbeo.github.io/glava-presentation/">
+<meta property="og:image" content="https://alexbeo.github.io/glava-presentation/img/04-citat-strana.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315202E'/%3E%3Crect x='14' y='44' width='36' height='7' rx='2' fill='%23FFE45C'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23F5F0E6'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; animation: none !important; }</style></noscript>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Glava, početak strane">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" style="fill:var(--ink)"/><rect x="14" y="44" width="36" height="7" rx="2" style="fill:var(--mark)"/><text x="32" y="41" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-size="38" font-weight="700" style="fill:var(--paper)">G</text></svg>
+      <span><b>Glava</b><small>AI organizer za kancelarije</small></span>
+    </a>
+    <nav class="nav" aria-label="Glavna navigacija">
+      <a href="#ai">AI</a>
+      <a href="#kancelarija">Kancelarija</a>
+      <a href="#bezbednost">Bezbednost</a>
+      <a href="#poredjenje">Poređenje</a>
+      <a href="#uvodjenje">Uvođenje</a>
+    </nav>
+    <a class="btn btn-ink" href="#kontakt">Zakažite demo</a>
+    <button class="theme-btn" type="button" id="themeBtn" aria-label="Promeni svetlu ili tamnu temu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+  <nav class="nav-mobile" aria-label="Sekcije">
+    <a href="#ai">AI</a><a href="#kancelarija">Kancelarija</a><a href="#bezbednost">Bezbednost</a><a href="#poredjenje">Poređenje</a><a href="#uvodjenje">Uvođenje</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="dateline reveal d1"><span>Za advokatske kancelarije u Srbiji</span><span>Novembar 2026</span></div>
+      <h1 class="reveal d2">AI koji čita spise predmeta — i&nbsp;za&nbsp;svaku tvrdnju <span class="mark">pokaže&nbsp;stranu</span>.</h1>
+      <p class="lede reveal d3">Glava je organizer kancelarije sa <strong>AI-jem ugrađenim u predmet</strong>: upisnik stranaka, delovodnik, rokovi i ročišta, dokumenti sa prepoznavanjem teksta na ćirilici i latinici. Radi <strong>na serveru kancelarije ili u oblaku</strong>, a strogo poverljivi spisi idu samo lokalnim modelima.</p>
+      <div class="cta-row reveal d4">
+        <a class="btn btn-ink" href="#kontakt">Zakažite demonstraciju
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        <a class="btn btn-line" href="#ai">Kako radi AI</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal d5">
+      <figure class="shot s1">
+        <div class="bar"><i></i><i></i><i></i><span>Presuda P 1234/2026 · Strana 1 · demo</span></div>
+        <img src="img/04-citat-strana.webp" width="1440" height="900" alt="Strana presude sa žutom oznakom citiranog mesta: pouka o pravnom leku, žalba u roku od 15 dana." data-cap="Klik na citat otvara stranu dokumenta i obeležava citirano mesto. Demo instalacija, izmišljeni podaci.">
+      </figure>
+      <figure class="shot s2">
+        <div class="bar"><i></i><i></i><i></i><span>1/2026 · AI · Pitanje o predmetu · demo</span></div>
+        <img src="img/03-ai-pitanje.webp" width="1440" height="900" alt="AI kartica predmeta: pitanje o roku za žalbu i odgovor u kojem svaka tvrdnja ima citat iz presude." data-cap="Pitanje o predmetu: svaka tvrdnja ima citat iz dokumenta predmeta. Demo instalacija sa test-modelom.">
+      </figure>
+      <aside class="quote-chip" aria-label="Primer citata">
+        <q>Protiv ove presude dozvoljena je žalba u roku od 15 dana od dana prijema…</q>
+        <small>Presuda P 1234/2026 · strana 1 · <b>citat potvrđen u tekstu</b></small>
+      </aside>
+    </div>
+    <p class="hero-cap reveal d5">Snimci ekrana: demo instalacija sa izmišljenim podacima i test-modelom.</p>
+  </div>
+  <div class="wrap">
+    <div class="facts reveal">
+      <div class="fact"><b>6</b><span>ugrađenih AI radnji, sve sa citatima</span></div>
+      <div class="fact"><b>32</b><span>pravila za procesne rokove: ZPP, ZKP, ZUP, ZIO, ZUS, uz protokol obračuna</span></div>
+      <div class="fact"><b>4</b><span>klase poverljivosti, model se bira prema klasi</span></div>
+      <div class="fact"><b>4</b><span>varijante interfejsa: srpska ćirilica i latinica, engleski, ruski</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GLAVA I -->
+<section class="chapter" id="ai">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <div class="chapter-no">Glava<span>I</span></div>
+      <div>
+        <h2>Veštačka inteligencija koja pokazuje izvor</h2>
+        <p>AI u Glavi je pomoćnik, a ne izvršilac. Radi nad dokumentima vašeg predmeta, uz svaku tvrdnju daje citat, a sve što menja predmet, kalendar ili delovodnik samo predlaže — zapis nastaje tek kada ga advokat potvrdi.</p>
+      </div>
+    </div>
+
+    <article class="clan reveal">
+      <div class="clan-text">
+        <div class="clan-label">Član 1.</div>
+        <h3>Svaka tvrdnja ima citat sa strane dokumenta</h3>
+        <p>Pitajte o predmetu svojim rečima. Odgovor se sastoji od tvrdnji, a uz svaku stoji citat iz dokumenta i link na njegovu stranu.</p>
+        <ul class="paras">
+          <li><b>Citat se proverava mašinski</b> u izvornom tekstu. Dozvoljene su samo sitne razlike: ćirilica ili latinica, dijakritika, velika i mala slova, prelomi reda.</li>
+          <li><b>Brojevi moraju da se poklope u celosti</b>, a „osnovan“ ne prolazi kao potvrda za „neosnovan“.</li>
+          <li><b>Tvrdnja bez potvrđenog citata se briše.</b> Ako otpadne više od polovine, odgovor se priprema ponovo; ako ni tada nema dovoljno, Glava kaže da nema dovoljno izvora umesto da nagađa.</li>
+          <li><b>Klik na citat</b> otvara stranu dokumenta sa obeleženim mestom.</li>
+        </ul>
+      </div>
+      <div class="stack cite-pair">
+        <figure class="shot">
+          <div class="bar"><i></i><i></i><i></i><span>Predmet 1/2026 · AI · Nedavni zahtevi</span></div>
+          <img src="img/16-ai-odgovor.webp" width="1044" height="689" loading="lazy" alt="Odgovor na pitanje o roku za žalbu: tvrdnje na latinici, uz svaku citat iz presude na ćirilici i dugme Citat je pogrešan." data-cap="Tvrdnja na latinici, citat iz presude na ćirilici: provera citata razume oba pisma.">
+        </figure>
+        <div class="arrow-note" aria-hidden="true">klik na citat ↓</div>
+        <figure class="shot">
+          <div class="bar"><i></i><i></i><i></i><span>Presuda P 1234/2026 · Strana 1</span></div>
+          <img src="img/17-citat.webp" width="1044" height="672" loading="lazy" alt="Strana presude sa žuto obeleženom poukom o pravnom leku." data-cap="Citirano mesto obeleženo na strani dokumenta.">
+        </figure>
+        <div class="cap">Snimci iz demo instalacije sa izmišljenim podacima i test-modelom: zato je tekst tvrdnji ovde doslovan citat. Provera citata, linkovi na strane i oznake isti su kao sa pravim modelom.</div>
+      </div>
+    </article>
+
+    <article class="clan flip reveal">
+      <div class="clan-text">
+        <div class="clan-label">Član 2.</div>
+        <h3>Poverljivi spisi ne napuštaju kancelariju</h3>
+        <p>Predmet i dokument imaju klasu poverljivosti. Zahtev modelu dobija najvišu klasu među korišćenim delovima teksta, a Glava bira model kome je ta klasa dozvoljena. Ako takvog modela nema, radnja se ne izvršava i vidi se šta nedostaje.</p>
+        <ul class="paras">
+          <li><b>Klasa provajdera se računa</b> iz njegove kartice: mehanizam prenosa, potpisan ugovor o obradi podataka (DPA), zabrana obuke na podacima, nulto zadržavanje podataka.</li>
+          <li><b>Strogo poverljivo ide samo lokalnim modelima</b>, osim ako vlasnik ručno ne podigne klasu provajdera uz obrazloženje — i to ostaje u dnevniku.</li>
+          <li><b>Režim rada određuje server:</b> samo lokalni modeli, hibrid (lokalni i modeli u oblaku preko https) ili SaaS. Proverava se pri čuvanju provajdera i pri svakom pozivu.</li>
+        </ul>
+        <figure class="shot" style="margin-top:22px">
+          <div class="bar"><i></i><i></i><i></i><span>AI · Provajderi</span></div>
+          <img src="img/10-ai-provajderi.webp" width="1184" height="653" loading="lazy" alt="Tri kartice AI provajdera: provajder u oblaku bez DPA dobija klasu Javno uz spisak onoga što nedostaje, provajder u EU sa DPA dobija klasu Interno, lokalni server dobija klasu Strogo poverljivo." data-cap="Primer podešavanja sa izmišljenim adresama: izračunata klasa i spisak onoga što provajderu nedostaje za višu klasu.">
+        </figure>
+      </div>
+      <div>
+        <div class="calc" id="calc">
+          <div class="calc-head"><b>Probajte: koju klasu dobija provajder?</b><span>isto pravilo kao u aplikaciji</span></div>
+          <div class="calc-body">
+            <div class="calc-in">
+              <div>
+                <label class="field-label" for="tm">Mehanizam prenosa</label>
+                <select id="tm">
+                  <option value="local">Lokalno, podaci ostaju na vašem serveru</option>
+                  <option value="eu_adequacy" selected>EU ili odluka o adekvatnosti</option>
+                  <option value="convention108">Država potpisnica Konvencije 108</option>
+                  <option value="dpf">Okvir EU–SAD za privatnost podataka</option>
+                  <option value="scc_poverenik">Standardne ugovorne klauzule (Poverenik)</option>
+                </select>
+              </div>
+              <label><input type="checkbox" id="dpa" checked><span>Potpisan ugovor o obradi podataka (DPA)</span></label>
+              <label><input type="checkbox" id="nt" checked><span>Provajderu zabranjena obuka na podacima</span></label>
+              <label><input type="checkbox" id="zdr"><span>Nulto zadržavanje podataka</span></label>
+            </div>
+            <div class="ladder" aria-live="polite">
+              <div class="rung" data-c="3">Strogo poverljivo</div>
+              <div class="rung" data-c="2">Poverljivo</div>
+              <div class="rung" data-c="1">Interno</div>
+              <div class="rung" data-c="0">Javno</div>
+              <div class="missing" id="missing"></div>
+            </div>
+          </div>
+        </div>
+        <div class="note-box">Sa lokalnim modelom (na primer Ollama na serveru kancelarije) dokumenti ne izlaze iz vaše mreže. U režimu „samo lokalno“ provajder u oblaku ne može ni da se sačuva.</div>
+      </div>
+    </article>
+
+    <article class="clan wide reveal">
+      <div class="clan-text">
+        <div class="clan-label">Član 3.</div>
+        <h3>Prijemna pošta čita akt umesto vas</h3>
+        <p class="narrow">Presuda stigne skenirana, fotografisana ili mejlom u sanduče kancelarije. Glava je pretvori u tekst, pročita rekvizite i pripremi predloge. Vi samo proverite i potvrdite.</p>
+      </div>
+      <div>
+        <div class="flow">
+          <div class="step"><b>Akt stiže</b><p>Otpremanje do 20 fajlova odjednom (i fotografije) ili poštansko sanduče kancelarije (IMAP).</p></div>
+          <div class="step"><b>Prepoznavanje teksta</b><p>OCR na ćirilici i latinici; arhivski PDF/A kada ga validator potvrdi.</p></div>
+          <div class="step"><b>Čitanje rekvizita <span class="ai">AI</span></b><p>Sud, upisnik i broj, vrsta i datum akta, dostava, stranke, ročište, pomenuti rokovi — svako polje sa citatom.</p></div>
+          <div class="step"><b>Predlozi</b><p>Povezivanje sa predmetom po broju i strankama, upis u delovodnik, ročište, rok.</p></div>
+          <div class="step"><b>Vi potvrđujete</b><p>Tek tada nastaje zapis, a u dnevniku ostaje oznaka da ga je predložio AI.</p></div>
+        </div>
+        <div class="pillars">
+          <div class="pillar"><b>Polje bez potvrde ostaje prazno</b>Datum mora biti među datumima citata, broj predmeta ceo, ime stranke doslovno. Ono što se ne potvrdi, unosite sami.</div>
+          <div class="pillar"><b>Datum dostave se nikada ne pogađa</b>Ako ga nema u aktu, Glava traži da ga unesete iz dostavnice ili eSandučeta.</div>
+          <div class="pillar"><b>Rok računa kalkulator, ne model</b>Rok se računa po pravilima zakona, sa praznicima i protokolom obračuna. Potvrđuje ga advokat ili pripravnik.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="clan flip reveal">
+      <div class="clan-text">
+        <div class="clan-label">Član 4.</div>
+        <h3>Rezime, hronologija i jutarnji pregled</h3>
+        <ul class="paras">
+          <li><b>Rezime dokumenta i predmeta</b> — pasusi sa citatima; rezime predmeta gradi se iz rezimea njegovih dokumenata.</li>
+          <li><b>Hronologija</b> — datum, opis i citat za svaki događaj; događaj bez datuma u tekstu se ne izmišlja.</li>
+          <li><b>Pitanje o predmetu</b> — hibridna pretraga (reči i značenje) samo kroz dokumente koje korisnik sme da vidi.</li>
+          <li><b>Jutarnji pregled</b> — ročišta i rokovi narednih dana i nepotvrđeni akti; svaka stavka vodi na svoj događaj. Na ekranu „Danas“ i mejlom; AI rezime pregleda vlasnik uključuje u podešavanjima.</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <figure class="shot">
+          <div class="bar"><i></i><i></i><i></i><span>Danas</span></div>
+          <img src="img/01-danas.webp" width="1440" height="900" loading="lazy" alt="Ekran Danas: aktivni predmeti, nepotvrđeni akt u Prijemnoj pošti, ročišta danas i sutra, rokovi i zadaci." data-cap="Ekran „Danas“: ročišta, rokovi po hitnosti, zadaci i nepotvrđeni akti.">
+        </figure>
+      </div>
+    </article>
+
+    <article class="clan reveal">
+      <div class="clan-text">
+        <div class="clan-label">Član 5.</div>
+        <h3>Vlasnik drži AI pod kontrolom</h3>
+        <ul class="paras">
+          <li><b>Mesečni budžeti</b> po korisniku i za celu kancelariju. Ograničenje je meko: pozivi upućeni u isto vreme mogu ga premašiti za cenu jednog poziva.</li>
+          <li><b>Evidencija svakog poziva:</b> korisnik, predmet, klasa poverljivosti, model, tokeni, trošak.</li>
+          <li><b>Tekst upita</b> se čuva ceo, samo kao heš (podrazumevano) ili se ne čuva. U dnevnik radnji tekst ne ulazi.</li>
+          <li><b>AI radnje sa verzijama:</b> nacrt → odobreno → aktivno, test na primerima pre aktiviranja i povratak na prethodnu verziju. Vlasnik može da doda i sopstvene radnje.</li>
+          <li><b>Dugmad „citat je pogrešan“ i „odgovor je pogrešan“</b> skupljaju prijave na jednom mestu.</li>
+          <li><b>Glava ne trenira modele</b> na podacima kancelarije.</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <figure class="shot">
+          <div class="bar"><i></i><i></i><i></i><span>AI · Potrošnja · demo</span></div>
+          <img src="img/12-ai-potrosnja.webp" width="1440" height="900" loading="lazy" alt="Tabela poslednjih AI poziva sa korisnikom, predmetom, zadatkom, modelom, klasom poverljivosti, tokenima i troškom." data-cap="Svaki poziv modelu u evidenciji: ko, za koji predmet, kojom klasom podataka i po kojoj ceni. Demo sa test-modelom, zato je trošak nula.">
+        </figure>
+        <figure class="shot">
+          <div class="bar"><i></i><i></i><i></i><span>AI · Radnje</span></div>
+          <img src="img/11-ai-radnje.webp" width="1440" height="900" loading="lazy" alt="Spisak ugrađenih AI radnji: hronologija dokumenta, rekviziti akta, pitanje o predmetu, jutarnji pregled, rezime dokumenta i rezime predmeta." data-cap="Šest ugrađenih AI radnji; nova formulacija se testira na primerima pre aktiviranja.">
+        </figure>
+      </div>
+    </article>
+
+    <article class="clan flip reveal">
+      <div class="clan-text">
+        <div class="clan-label">Član 6.</div>
+        <h3>Vaš model, vaš izbor</h3>
+        <p>Glava nije vezana za jednog dobavljača. Lokalni modeli rade na serveru kancelarije, a modeli u oblaku dobijaju samo podatke koje im klasa dozvoljava.</p>
+        <div class="chips" aria-label="Podržani adapteri">
+          <span class="chip local">Ollama</span><span class="chip local">vLLM</span><span class="chip local">llama.cpp</span>
+          <span class="chip">OpenAI-kompatibilni</span><span class="chip">Mistral</span><span class="chip">Azure OpenAI</span><span class="chip">Anthropic</span><span class="chip">Gemini</span>
+        </div>
+        <ul class="paras">
+          <li><b>Model po zadatku:</b> za svaki zadatak koristi se prvi model po redu kome je klasa podataka dozvoljena.</li>
+          <li><b>Promena modela za pretragu</b> pokreće ponovno indeksiranje u pozadini; dok traje, odgovara stari indeks.</li>
+          <li><b>Bez podešenog modela</b> i dalje rade dokumenti, OCR i pretraga po rečima.</li>
+        </ul>
+      </div>
+      <div class="note-box big">
+        <b>Glava ne zamenjuje pravnu bazu.</b>
+        Pravne baze odgovaraju šta piše u zakonu. Glava radi unutar vašeg predmeta: šta piše u vašim spisima, na kojoj strani, i šta iz toga treba upisati u kalendar i delovodnik.
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- GLAVA II -->
+<section class="chapter" id="kancelarija">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <div class="chapter-no">Glava<span>II</span></div>
+      <div>
+        <h2>Kancelarija u redu, po srpskoj praksi</h2>
+        <p>Sve što advokat vodi svakog dana — na jednom mestu, po uzoru na pravila Advokatske komore o kancelarijskom poslovanju.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="tabs" role="tablist" aria-label="Funkcije kancelarije">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="p-calc" id="t-calc">Kalkulatori</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-conf" id="t-conf">Sukob interesa</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-cal" id="t-cal">Kalendar</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-cost" id="t-cost">Troškovnik</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-reg" id="t-reg">Upisnik stranaka</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-mat" id="t-mat">Predmet</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-calc" aria-labelledby="t-calc">
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i><span>Kalkulatori</span></div>
+          <img src="img/05-kalkulatori.webp" width="1440" height="1290" loading="lazy" alt="Kalkulatori: rok za žalbu sa protokolom obračuna i pomeranjem sa Božića na prvi radni dan, advokatska tarifa i sudska taksa." data-cap="Rok sa protokolom: 07.01.2027. je neradni dan (Božić), rok se pomera na 08.01.2027."></figure>
+        <div><h3>Rokovi, tarifa i takse</h3><ul class="paras">
+          <li>32 pravila za procesne rokove (ZPP, ZKP, ZUP, ZIO, ZUS), uz član zakona.</li>
+          <li>Protokol obračuna korak po korak: dostava, početak toka, istek, pomeranje sa neradnog dana.</li>
+          <li>Praznici, uključujući pravoslavni Uskrs, računaju se automatski.</li>
+          <li>Advokatska tarifa (poeni i iznos) i sudske takse po vrednosti spora.</li>
+          <li>Pravila koja advokat još nije potvrdio, kao i podaci tarife i taksi, nose oznaku „zahteva proveru“. Za rok uvek odgovara advokat.</li>
+        </ul></div>
+      </div>
+      <div class="panel" role="tabpanel" id="p-conf" aria-labelledby="t-conf" hidden>
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i><span>Novi predmet</span></div>
+          <img src="img/07-sukob-interesa.webp" width="1440" height="900" loading="lazy" alt="Otvaranje novog predmeta: provera sukoba interesa pronalazi da je predložena protivna strana klijent u drugom predmetu." data-cap="Protivna strana je već klijent kancelarije — Glava to pokazuje pre otvaranja predmeta."></figure>
+        <div><h3>Sukob interesa pre prvog koraka</h3><ul class="paras">
+          <li>Provera pri otvaranju predmeta i pri dodavanju stranke, po imenu, JMBG-u i PIB-u.</li>
+          <li>Rezultat pokazuje stranku, vrstu podudaranja i predmete u kojima se pojavljuje.</li>
+          <li>Odluka i obrazloženje upisuju se u dnevnik.</li>
+          <li>Za predmet koji korisnik ne vidi, prikazuje se samo da postoji — bez detalja.</li>
+        </ul></div>
+      </div>
+      <div class="panel" role="tabpanel" id="p-cal" aria-labelledby="t-cal" hidden>
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i><span>Kalendar</span></div>
+          <img src="img/06-kalendar.webp" width="1440" height="900" loading="lazy" alt="Mesečni kalendar sa ročištima, rokovima, sastancima i zadacima za novembar 2026." data-cap="Ročišta, rokovi, sastanci i zadaci u jednom kalendaru."></figure>
+        <div><h3>Ročišta i rokovi bez propuštanja</h3><ul class="paras">
+          <li>Ročišta, rokovi, sastanci i zadaci; pregled kao spisak ili po mesecu.</li>
+          <li>Upozorenje na preklapanje termina.</li>
+          <li>Pretplata na kalendar (ICS) za telefon i Outlook.</li>
+          <li>Podsetnici mejlom i jutarnji pregled; propušteni podsetnici se šalju naknadno.</li>
+        </ul></div>
+      </div>
+      <div class="panel" role="tabpanel" id="p-cost" aria-labelledby="t-cost" hidden>
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i><span>Troškovnik</span></div>
+          <img src="img/08-troskovnik.webp" width="1440" height="900" loading="lazy" alt="Troškovnik predmeta: tužba, održano ročište i putni trošak sa poenima, iznosima po tarifi i ukupnim iznosom." data-cap="Troškovnik po advokatskoj tarifi, sa putnim troškovima i osnovicom za PDV."></figure>
+        <div><h3>Troškovnik po tarifi</h3><ul class="paras">
+          <li>Radnje po advokatskoj tarifi: poeni, vrednost poena, iznos.</li>
+          <li>Putni troškovi, plaćeno za klijenta, PDV prema statusu advokata.</li>
+          <li>Dogovoreni iznos umesto tarifnog, uz oznaku.</li>
+          <li>Izvoz u Excel i štampa.</li>
+        </ul></div>
+      </div>
+      <div class="panel" role="tabpanel" id="p-reg" aria-labelledby="t-reg" hidden>
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i><span>Upisnik stranaka</span></div>
+          <img src="img/09-upisnik.webp" width="1440" height="900" loading="lazy" alt="Upisnik stranaka sa klijentima, JMBG-om ili PIB-om, adresom, datumom prvog angažmana i predmetima." data-cap="Upisnik stranaka po uzoru na pravila Advokatske komore."></figure>
+        <div><h3>Upisnik stranaka i delovodnik</h3><ul class="paras">
+          <li>Upisnik stranaka po uzoru na pravila Advokatske komore o kancelarijskom i arhivskom poslovanju.</li>
+          <li>Delovodnik predmeta: primljena i poslata pismena, numeracija po predmetu.</li>
+          <li>Fizička i pravna lica, JMBG i PIB.</li>
+          <li>Izvoz u Excel i štampa.</li>
+        </ul></div>
+      </div>
+      <div class="panel" role="tabpanel" id="p-mat" aria-labelledby="t-mat" hidden>
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i><span>Predmet 1/2026</span></div>
+          <img src="img/02-predmet.webp" width="1440" height="900" loading="lazy" alt="Kartica predmeta: detalji postupka, stranke, tim, delovodnik, status i zabrana brisanja." data-cap="Predmet: postupak, stranke, tim, delovodnik, status i zabrana brisanja."></figure>
+        <div><h3>Predmet kao centar svega</h3><ul class="paras">
+          <li>Kartice: stranke, rokovi i ročišta, delovodnik, dokumenti, AI, troškovnik.</li>
+          <li>Tim i vidljivost: cela kancelarija ili samo tim na predmetu.</li>
+          <li>Klasa poverljivosti predmeta i dokumenata.</li>
+          <li>Zabrana brisanja i izvoz celog predmeta.</li>
+        </ul></div>
+      </div>
+    </div>
+
+    <div class="mini reveal">
+      <div>
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i><span lang="sr-Cyrl">Ћирилица</span></div>
+          <img src="img/14-cirilica.webp" width="1440" height="900" loading="lazy" alt="Isti ekran predmeta sa interfejsom na srpskoj ćirilici." data-cap="Interfejs na srpskoj ćirilici."></figure>
+        <h4>Ćirilica, latinica, engleski, ruski</h4>
+        <p>Svaki korisnik bira jezik interfejsa. OCR i pretraga razumeju oba pisma.</p>
+      </div>
+      <div>
+        <figure class="shot"><div class="bar"><i></i><i></i><i></i><span>Danas · tamna tema</span></div>
+          <img src="img/15-tamna-tema.webp" width="1440" height="900" loading="lazy" alt="Ekran Danas u tamnoj temi." data-cap="Tamna tema za rad uveče."></figure>
+        <h4>Svetla i tamna tema</h4>
+        <p>Za duge dane u kancelariji i rad uveče.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLAVA III -->
+<section class="chapter" id="bezbednost">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <div class="chapter-no">Glava<span>III</span></div>
+      <div>
+        <h2>Bezbednost, čuvanje i trag svake radnje</h2>
+        <p>Advokatska tajna nije podešavanje, nego arhitektura: odvojeni podaci, šifrovane tajne, dnevnik koji se ne može neprimetno promeniti.</p>
+      </div>
+    </div>
+    <div class="sec-grid reveal">
+      <div class="sec">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        <b>Zasebna baza za svaku kancelariju</b><p>U oblaku svaka kancelarija ima svoju šemu baze; filter pristupa radi i unutar pretrage.</p>
+      </div>
+      <div class="sec">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <b>Dvofaktorska prijava</b><p>TOTP aplikacija; vlasnik može da je uvede za sve. Zaštita od pogađanja lozinke.</p>
+      </div>
+      <div class="sec">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+        <b>Dnevnik sa heš-lancem</b><p>Baza ne dozvoljava izmenu ni brisanje zapisa, a svaka izmena lanca postaje vidljiva. Izvoz u Excel i JSONL.</p>
+      </div>
+      <div class="sec">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <b>Rokovi čuvanja</b><p>Politike čuvanja dokumenata, uključujući rok po propisima o sprečavanju pranja novca. Podrazumevane vrednosti potvrđuje kancelarija.</p>
+      </div>
+      <div class="sec">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+        <b>Zabrana brisanja i kontrolisano brisanje</b><p>Dok traje zabrana brisanja, dokumenti predmeta se ne brišu ni ručno ni po isteku roka. Po isteku roka čuvanja ništa se ne briše bez potvrde vlasnika. Brisanje je potpuno: fajlovi, tekst, vektori, AI upiti.</p>
+      </div>
+      <div class="sec">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        <b>Izvoz predmeta</b><p>ZIP sa opisom i manifestom SHA-256: stranke, delovodnik, dokumenti, rokovi, troškovnik; dnevnik predmeta kada izvozi vlasnik.</p>
+      </div>
+    </div>
+    <div class="sec-shot reveal">
+      <figure class="shot"><div class="bar"><i></i><i></i><i></i><span>Dnevnik</span></div>
+        <img src="img/13-dnevnik.webp" width="1176" height="376" loading="lazy" alt="Dnevnik filtriran na rokove: tri potvrđena roka sa pravilom, datumom isteka, upozorenjem za neprovereno pravilo i hešom svakog zapisa." data-cap="Dnevnik, filter „Rokovi“: svaki zapis ima heš povezan sa prethodnim; neprovereno pravilo ostaje zabeleženo kao upozorenje."></figure>
+      <ul class="paras">
+        <li><b>Šifrovani ključevi</b> AI provajdera i lozinke poštanskih sandučića.</li>
+        <li><b>Bez telemetrije i spoljnih CDN-ova:</b> aplikacija ništa ne učitava sa tuđih servera; u lokalnom režimu OCR, pretraga i AI rade bez interneta.</li>
+        <li><b>Uloge:</b> vlasnik, advokat, pripravnik, asistent — asistent ne potvrđuje rokove i koristi AI samo ako vlasnik dozvoli.</li>
+        <li><b>Pristup predmetu</b> određuje vidljivost predmeta, a ne AI.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GLAVA IV -->
+<section class="chapter" id="poredjenje">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <div class="chapter-no">Glava<span>IV</span></div>
+      <div>
+        <h2>Poređenje sa drugim rešenjima</h2>
+        <p>Uporedili smo Glavu sa osam proizvoda koje kancelarije u Srbiji najčešće razmatraju: regionalnim programima za kancelarije, AI asistentima i dva svetska standarda. Gde nešto nismo našli u javnim izvorima, tako i piše.</p>
+      </div>
+    </div>
+
+    <h3 class="sub reveal">Šta Glava ima, a kod drugih nije pronađeno u javnim izvorima</h3>
+    <div class="diff reveal">
+      <article data-n="1"><b>Na vašem serveru ili u oblaku — po izboru</b><p>Ni kod jednog od osam proizvoda instalacija na serveru kancelarije nije pronađena.</p></article>
+      <article data-n="2"><b>AI potpuno lokalno, model po klasi poverljivosti</b><p>Kod drugih: OpenAI, Anthropic, neobjavljeni ili samo modeli u oblaku.</p></article>
+      <article data-n="3"><b>Citat sa brojem strane dokumenta predmeta</b><p>Kod drugih citat po strani nije pronađen u javnim izvorima; neki citiraju dokument ili član zakona.</p></article>
+      <article data-n="4"><b>Akti iz mejla kancelarije i skenovi u Prijemnoj pošti</b><p>Kod srpskih proizvoda prijem iz poštanskog sandučeta nije pronađen; Clio ga ima, ali srpski interfejs kod njega nije pronađen.</p></article>
+      <article data-n="5"><b>Upisnik, delovodnik, sukob interesa i kalkulatori u jednom</b><p>Drugi imaju pojedine delove; kalkulator procesnih rokova po srpskim zakonima nije pronađen ni kod koga.</p></article>
+      <article data-n="6"><b>Dnevnik sa heš-lancem, 2FA i zabrana brisanja</b><p>Heš-lanac i zabrana brisanja nisu pronađeni ni kod koga; 2FA je potvrđena samo kod Clio.</p></article>
+    </div>
+
+    <div class="legend reveal">
+      <span><i class="st y">✓ da</i> funkcija je javno navedena</span>
+      <span><i class="st p">delimično</i> postoji deo, opisan u ćeliji</span>
+      <span><i class="st n">ne</i> izvor je izričito isključuje</span>
+      <span><i class="st u">—</i> nije pronađeno u javnim izvorima</span>
+      <span><i class="st x">bez AI</i> AI nije naveden</span>
+    </div>
+    <div class="matrix-wrap reveal" tabindex="0" aria-label="Tabela poređenja, može da se pomera vodoravno">
+      <table class="matrix" id="matrix">
+        <caption class="sr-only">Poređenje funkcija Glave i osam drugih proizvoda, stanje na dan 07.11.2026.</caption>
+      </table>
+      <noscript><p style="padding:16px">Tabela poređenja zahteva JavaScript.</p></noscript>
+    </div>
+    <p class="method">Stanje na dan 07.11.2026, prema javno dostupnim stranicama proizvođača i prodavnica aplikacija. Glava je ocenjena prema funkcijama koje postoje u trenutnoj verziji. Brojevi u ćelijama vode na izvor. † — stranica ne dozvoljava automatski pristup, sadržaj je preuzet iz rezultata pretrage. Nazivi proizvoda pripadaju njihovim vlasnicima. Ako je nešto netačno ili zastarelo, javite nam i ispravićemo.</p>
+
+    <div class="stronger reveal">
+      <div><span class="tag">Iskreno</span><h3>Gde su drugi jači</h3></div>
+      <ul>
+        <li><b>Pravna baza i AI asistent za propise</b> — Paragraf Lex i Kruna AI. Glava radi uz pravnu bazu, ne umesto nje.</li>
+        <li><b>Fakturisanje</b> — ima ga pet od osam proizvoda. U Glavi je u planu.</li>
+        <li><b>Mobilne aplikacije</b> — Paragraf, PravoVreme, Clio i Harvey. Glava za sada nudi pretplatu na kalendar na telefonu i podsetnike mejlom.</li>
+      </ul>
+    </div>
+
+    <details class="sources reveal" id="izvori">
+      <summary>Izvori za tabelu (32)</summary>
+      <ol id="sourceList"></ol>
+    </details>
+  </div>
+</section>
+
+<!-- GLAVA V -->
+<section class="chapter" id="uvodjenje">
+  <div class="wrap">
+    <div class="chapter-head reveal">
+      <div class="chapter-no">Glava<span>V</span></div>
+      <div>
+        <h2>Uvođenje</h2>
+        <p>Isti proizvod za instalaciju u kancelariji i za oblak. Vi birate gde su podaci.</p>
+      </div>
+    </div>
+    <div class="deploy reveal">
+      <article>
+        <span class="tag">Na vašem serveru</span>
+        <h3>On-premise</h3>
+        <ul>
+          <li>Docker Compose: web, pozadinski procesi, PostgreSQL.</li>
+          <li>Bez lokalnih modela: 4 GB RAM i 2 jezgra.</li>
+          <li>Lokalni model klase 24B: procena je GPU sa 24 GB i 32 GB RAM; bez GPU-a preporučujemo hibridni režim.</li>
+          <li>Rezervne kopije i zaštita servera su u nadležnosti kancelarije — pomažemo pri podešavanju.</li>
+        </ul>
+      </article>
+      <article>
+        <span class="tag">U oblaku</span>
+        <h3>SaaS</h3>
+        <ul>
+          <li>Zasebna šema baze za svaku kancelariju.</li>
+          <li>Sopstvena adresa kancelarije (poddomen) i HTTPS.</li>
+          <li>Modeli u oblaku prema klasi poverljivosti.</li>
+          <li>Bez instalacije kod vas: kancelariju u oblaku otvaramo mi.</li>
+        </ul>
+      </article>
+      <article class="plan">
+        <span class="tag">U planu</span>
+        <h3>Sledeće</h3>
+        <ul>
+          <li>Šabloni dokumenata i AI nacrti podnesaka.</li>
+          <li>Pravna baza: propisi i sudska praksa sa linkovima ka izvorima.</li>
+          <li>Evidencija vremena, fakture i SEF.</li>
+        </ul>
+        <p class="small-muted">Bez obećanih datuma: najavljujemo kada je spremno.</p>
+      </article>
+    </div>
+
+    <div class="fine reveal">
+      <h3>Važne napomene</h3>
+      <p>Glava je pomoćni alat za advokatsku kancelariju. Nije pravni savet, nije zvanični registar i nije povezana sa državnim sistemima.</p>
+      <p>Obračuni rokova, tarife i taksi su pomoćni. Pravila koja advokat još nije potvrdio i podaci tarife i taksi označeni su kao „zahteva proveru“. Za potvrđeni rok odgovara advokat.</p>
+      <p>Odgovori AI-ja nisu pravno mišljenje. Provera citata je mašinska: potvrđuje da citat postoji u dokumentu, ne i da je zaključak pravno tačan. AI ništa ne menja sam.</p>
+      <p>Prepoznavanje teksta (OCR) može da pogreši, naročito na lošim skenovima. Tačnost je do sada merena na sintetičkim skenovima; merenje na stvarnim skenovima sudskih akata predstoji.</p>
+      <p>Snimci ekrana su iz demo instalacije sa izmišljenim strankama i predmetima. AI odgovori na snimcima dobijeni su test-modelom.</p>
+      <p>Poređenje sa drugim proizvodima zasnovano je na javnim izvorima na dan 07.11.2026.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Pogledajte Glavu <span class="mark">na svojim predmetima</span>.</h2>
+      <p>Za 30 minuta pokazaćemo kako Glava čita akt iz Prijemne pošte, računa rok i odgovara na pitanje o predmetu — sa citatom i stranom.</p>
+    </div>
+    <div class="contact-card">
+      <p class="contact-soon"><b>Prijave za demonstracije uskoro.</b> Kontakt podaci biće objavljeni na ovoj strani.</p>
+      <a class="btn btn-ink" href="#poredjenje">Pogledajte poređenje
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Glava — organizer i AI pomoćnik za advokatske kancelarije</span>
+    <span>Stanje na dan 07.11.2026.</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Uvećan snimak ekrana">
+  <button type="button" id="lbClose" aria-label="Zatvori">×</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
+</body>
+</html>
